@@ -4,6 +4,7 @@ class Business < ActiveRecord::Base
   def self.import(path = "/var/www/public/ol/db/csv/engineering_project_businesses.csv")
     if File.exist?(path)
       CSV.foreach(path, headers: true) do |row|
+          # I tried using row.to_hash, but issues arose
           Business.create({
             :uuid => row['uuid'],
             :name => row['name'],
@@ -15,11 +16,11 @@ class Business < ActiveRecord::Base
             :country => row['country'],
             :phone => row['phone'],
             :website => row['website'],
-            :entry_created_at => row['created_at']
+            :created_at => row['created_at']
           })
       end
       elsif
-        puts "File does not exist."
+        p "File does not exist."
       end
   end
 end
