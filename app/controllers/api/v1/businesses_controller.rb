@@ -11,7 +11,7 @@ class Api::V1::BusinessesController < ApplicationController
     if businesses
       render :json => businesses, :status => 200
     else
-      render :json => {:errors => "Couldn't render businesses"}, :status => 404
+      render :json => {:error => "Couldn't render businesses"}, :status => 404
     end
   end
 

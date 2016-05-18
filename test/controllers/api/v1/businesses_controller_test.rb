@@ -33,7 +33,7 @@ class Api::V1::BusinessesControllerTest < ActionController::TestCase
     assert((page_number + 1) == hash["page_number"].to_i)
   end
 
-  test "bussinesses with no params next url page number should be 2" do
+  test "bussinesses index with no page number params should be 2" do
     get :index
     body = JSON.parse(response.body)
     q = URI(body["next_url"]).query

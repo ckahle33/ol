@@ -9,8 +9,7 @@ Instructions:
 
 2. `bundle install`
 
-3. I am using MySQL in this project as there were a decent amount of recordsa and Postgres seemed like overkill. Create the databases with
-`CREATE DATABASE ol_development; CREATE DATABASE ol_test; CREATE DATABASE ol_production;`
+3. Create the databases with `mysql> CREATE DATABASE ol_development; CREATE DATABASE ol_test; CREATE DATABASE ol_production;`
 
 4. `rake db:migrate`
 
