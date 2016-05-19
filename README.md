@@ -24,3 +24,5 @@ Instructions:
 9. set up the test DB with `rake db:migrate RAILS_ENV=test` run the suite with `rake test`
 
 10. That's it!! ( I think). Any quetions please email me @ ckahle33@gmail.com for clarification. Thanks!
+
+Credits: I am leveraging the kaminari gem to simplify pagination, the puma web server gem, and the mysql2 gem.
